@@ -1,0 +1,25 @@
+# 使用Hydra控制调度器，训练模型，数据处理路径
+defaults:
+  - _self_
+
+# 模型参数
+model:
+  module: 'diffusion'
+  in_channels:
+  out_channels:
+  base_channels:
+  depth:
+
+diffusion:
+  sampler: 'ddpm'
+  time_steps:
+
+training:
+  epochs:
+  batch_size:
+  grad_accu_steps:
+  seed:
+  optimizer:
+
+distributed:
+  use_dist: True
